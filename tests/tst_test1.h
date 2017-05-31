@@ -3,7 +3,7 @@
 
 /* using namespace testing; */
 extern "C" {
-#include "../myfunc.h"
+#include "myfunc.h"
 }
 
 TEST(test1, suite1)
@@ -14,7 +14,7 @@ TEST(test1, suite1)
 
 TEST(test2, suite1)
 {
-    EXPECT_EQ(myfunc(2), 4);
+    EXPECT_EQ(myfunc(0), 4);
 }
 
 TEST(test1, suite2)

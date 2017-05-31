@@ -7,7 +7,9 @@ CONFIG += thread
 CONFIG -= qt
 
 HEADERS +=     tst_test1.h \
-    ../myfunc.h
+    ../app/myfunc.h
 
 SOURCES +=     main.cpp \
-    ../myfunc.c
+    ../app/myfunc.c
+
+INCLUDEPATH += ../app
