@@ -1,10 +1,9 @@
-TEMPLATE = app
-CONFIG += console
+TEMPLATE = subdirs
+
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.c \
-    myfunc.c
 
-HEADERS += \
-    myfunc.h
+SUBDIRS = app tests
+
+CONFIG += ordered
