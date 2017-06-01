@@ -7,7 +7,8 @@ CONFIG += thread
 CONFIG -= qt
 
 HEADERS +=     tst_test1.h \
-    ../app/myfunc.h
+    ../app/myfunc.h \
+    fibonachi_test.h
 
 SOURCES +=     main.cpp \
     ../app/myfunc.c
