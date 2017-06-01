@@ -10,7 +10,7 @@ script:
   - ./tests/tests
 
 after_success:
-  - coveralls --root .. -E ".*external.*" -E ".*CMakeFiles.*" -E ".*tests/.*.cpp.*" -E ".*tests/.*.h.*"
+  - coveralls --root .. -E ".*external.*" -E ".*tests/.*.cpp.*"
 
 notifications:
   email: false
