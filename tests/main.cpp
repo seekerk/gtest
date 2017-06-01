@@ -1,4 +1,5 @@
 #include "tst_test1.h"
+#include "fibonachi_test.h"
 
 #include <gtest/gtest.h>
 

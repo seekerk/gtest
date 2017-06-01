@@ -8,3 +8,9 @@ SOURCES += main.c \
 
 HEADERS += \
     myfunc.h
+
+QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
+
+# gcov
+QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
+LIBS += -lgcov
