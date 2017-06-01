@@ -8,9 +8,6 @@ script:
   - qmake
   - make
   - ./tests/tests
-# Codecov
-  - ./get_code_cov.sh
-  - codecov
 
 after_success:
   - coveralls --root .. -E ".*external.*" -E ".*CMakeFiles.*" -E ".*tests/.*.cpp.*" -E ".*tests/.*.h.*"
