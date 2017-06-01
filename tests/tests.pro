@@ -6,7 +6,7 @@ CONFIG -= app_bundle
 CONFIG += thread
 CONFIG -= qt
 
-QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
+QMAKE_CXXFLAGS += -Wall -Wextra -Werror
 
 # gcov
 QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
