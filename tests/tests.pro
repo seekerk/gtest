@@ -6,6 +6,13 @@ CONFIG -= app_bundle
 CONFIG += thread
 CONFIG -= qt
 
+QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
+
+# gcov
+QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
+LIBS += -lgcov
+
+
 HEADERS +=     tst_test1.h \
     ../app/myfunc.h \
     fibonachi_test.h
