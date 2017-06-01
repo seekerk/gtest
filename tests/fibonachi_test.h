@@ -14,8 +14,8 @@ TEST(fibonachiTest, num0) {
 }
 
 TEST(fibonachiTest, greather2) {
-    ASSERT_EQ(fibonachi(5), 1 + 1 + 2 + 3 + 5);
-    ASSERT_EQ(fibonachi(10), 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21 + 34 + 55);
+    ASSERT_EQ(fibonachi(5), 5);
+    ASSERT_EQ(fibonachi(10), 55);
 }
 
 TEST(fibonachiTest, negative) {
