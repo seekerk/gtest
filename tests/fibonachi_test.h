@@ -36,7 +36,8 @@ TEST(fibonachiTest, inputFile) {
     if (fd < 0)
         ASSERT_EQ(errno, 0);
     char *buf = (char *)malloc(sizeof(char) * 512);
-    read(fd, buf, 512);
+    int readcount = read(fd, buf, 512);
+    ASSERT_TRUE(readcount > 0);
     close(fd);
 
     int input = 0;
