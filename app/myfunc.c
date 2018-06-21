@@ -1,9 +1,14 @@
 
+#include <stdlib.h>
 #include "myfunc.h"
 
 int myfunc(int b) {
-    return b+4;
+    char *buffer = malloc(sizeof(char) * 1000);
+    buffer [0] = b+4;
+    return buffer[0];
 }
+
+int val;
 
 int fibonachi(int num) {
     int prev = 1;

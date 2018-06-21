@@ -3,6 +3,10 @@
 
 #include <gtest/gtest.h>
 
+#include <fcntl.h>
+#include <errno.h>
+#include <unistd.h>
+
 extern "C" {
 #include "myfunc.h"
 }
@@ -20,6 +24,29 @@ TEST(fibonachiTest, greather2) {
 
 TEST(fibonachiTest, negative) {
     ASSERT_EQ(fibonachi(-1), 0);
+}
+
+TEST(fibonachiTest, inputFile) {
+    val = 2;
+    char *filename = (char *)malloc(sizeof(char) * 1024);
+    sprintf(filename, "%s/input321.txt", INPUTDIR);
+
+    int fd = open(filename, O_RDONLY);
+    free(filename);
+    if (fd < 0)
+        ASSERT_EQ(errno, 0);
+    char *buf = (char *)malloc(sizeof(char) * 512);
+    read(fd, buf, 512);
+    close(fd);
+
+    int input = 0;
+    int output =0;
+    int ret = sscanf(buf, "%d %d", &input, &output);
+    free(buf);
+    ASSERT_EQ(ret, 2);
+
+    ret = fibonachi(input);
+    ASSERT_EQ(ret, output);
 }
 
 #endif // FIBONACHI_H
