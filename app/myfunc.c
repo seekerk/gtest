@@ -4,7 +4,7 @@
 
 int myfunc(int b) {
     char *buffer = malloc(sizeof(char) * 1000);
-    buffer [0] = b+4;
+    buffer [0] = b + 4;
     return buffer[0];
 }
 
