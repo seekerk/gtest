@@ -27,7 +27,7 @@ TEST(TestStdOut, TestStdOut) {
     FILE *outFile = fopen("TestStdOut_TestStdOut.out", "wb");
 
     // проверяем что файл открылся
-    ASSERT_NE(outFile, nullptr);
+    ASSERT_TRUE(outFile != NULL);
 
     // закрываем выходной поток и заменяем его на файл
     close(STDOUT_FILENO);
@@ -51,6 +51,9 @@ TEST(TestStdOut, TestStdOut) {
     int testFd = open("TestStdOut_TestStdOut.out", O_RDONLY);
     int originFd = open(filename, O_RDONLY);
     free(filename);
+
+    ASSERT_NE(testFd, -1);
+    ASSERT_NE(originFd, -1);
 
     // подготовка к чтению данных
     int outputCount;
