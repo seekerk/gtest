@@ -1,5 +1,5 @@
 os: linux
-dist: latest
+dist: xenial
 
 language:
   - cpp
@@ -23,7 +23,8 @@ after_success:
 
 cache:
   directories:
-    - '$HOME/.sonar/cache'
+  - '$HOME/.m2/repository'
+  - '$HOME/.sonar/cache'
 
 notifications:
   email: false
