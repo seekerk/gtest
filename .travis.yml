@@ -7,8 +7,6 @@ before_install:
 addons:
   sonarcloud:
     organization: "seekerk-github"
-    token:
-      secure: $SONAR_TOKEN
 
 script:
   - qmake
