@@ -1,21 +1,10 @@
-name: C/C++ CI
-
-on:
-  push:
-      branches: [ master ]
-  pull_request:
-      branches: [ master ]
-
+name: CI/CD GitHub Actions
+on: [push]
 jobs:
-  build-and-test:
-      runs-on: ubuntu-latest
-      steps:
-      - uses: actions/checkout@v2
-      - name: install depends
-      run: pip install --user cpp-coveralls
-      - name: configure
-      run: qmake
-      - name: make
-      run: make
-      - name: make test
-      run: make test
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: pip install --user cpp-coveralls
+      - run: qmake
+      - run: make
+      - run: make test
