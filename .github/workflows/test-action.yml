@@ -6,8 +6,6 @@ jobs:
     steps:
       - run: pip install --user cpp-coveralls
       - run: sudo apt install -y qt5-qmake qt5-default
-      - run: cd ${{ github.workspace }}
-      - run: ls -la .
-      - run: qmake
-      - run: make
-      - run: make test
+      - run: cd ${{ github.workspace }} && qmake
+      - run: cd ${{ github.workspace }} && make
+      - run: cd ${{ github.workspace }} && make test
