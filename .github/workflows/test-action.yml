@@ -14,4 +14,4 @@ jobs:
       - run: ./tests/tests
 
       - name: Coveralls
-        run: COVERALLS_REPO_TOKEN=${{ secrets.GITHUB_TOKEN }} coveralls --root . -E ".*external.*" -E ".*tests.*"
+        run: coveralls -t ${{ secrets.coveralls_token }} --root . -E ".*external.*" -E ".*tests.*"
