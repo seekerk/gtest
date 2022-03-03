@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pip install --user cpp-coveralls
-      - run: sudo apt install -y qt5-qmake
+      - run: sudo apt install -y qt5-qmake qt5-default
       - run: qmake
       - run: make
       - run: make test
