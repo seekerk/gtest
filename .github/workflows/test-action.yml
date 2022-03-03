@@ -1,7 +1,7 @@
 name: CI/CD GitHub Actions
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  gtest-tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -57,8 +57,8 @@ jobs:
           unzip -o $HOME/.sonar/build-wrapper-linux-x86.zip -d $HOME/.sonar/
           echo "$HOME/.sonar/build-wrapper-linux-x86" >> $GITHUB_PATH
       - name: Run build-wrapper
+        run: qmake
         run: |
-          qmake
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} make clean all --config Release
       - name: Run sonar-scanner
         env:
