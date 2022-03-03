@@ -9,4 +9,9 @@ jobs:
       - run: sudo apt install -y qt5-qmake qt5-default
       - run: qmake
       - run: make
-      - run: make test
+      - run: ./tests/tests
+
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
