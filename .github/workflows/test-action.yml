@@ -15,5 +15,3 @@ jobs:
 
       - name: Coveralls
         run: coveralls --root . -E ".*external.*" -E ".*tests.*"
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
