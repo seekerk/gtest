@@ -5,8 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: git submodule init
+      - run: git submodule update
       - run: pip install --user cpp-coveralls
-      - run: sudo apt install -y qt5-qmake qt5-default libgtest-dev libgmock-dev
+      - run: sudo apt install -y qt5-qmake qt5-default
       - run: qmake
       - run: make
       - run: ./tests/tests
