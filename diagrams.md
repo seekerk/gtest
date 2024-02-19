@@ -3,10 +3,11 @@
 ## Литература и справочные руководства
 * https://mermaid.js.org/
 * https://plantuml.com/
+* https://habr.com/ru/articles/652867/
 
 ## Диаграмма активности
 * Документация: https://plantuml.com/ru/activity-diagram-beta
-* Онлайн генерация
+* Онлайн генерация (формат mermaid)
 ```mermaid
 stateDiagram-v2
 node1: Скачать шаблон проекта
