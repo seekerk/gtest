@@ -5,9 +5,9 @@
 * https://plantuml.com/
 * https://habr.com/ru/articles/652867/
 
-## Диаграмма активности
+## Диаграмма активности (Activity diagram)
 * Документация: https://plantuml.com/ru/activity-diagram-beta
-* Онлайн генерация (формат mermaid)
+* Онлайн генерация (формат mermaid, используется инструмент Диаграммы состояний)
 ```mermaid
 stateDiagram-v2
 node1: Скачать шаблон проекта
@@ -35,3 +35,7 @@ node8 --> [*]
 * [оффлайн файл](diagrams/activity.puml)
 
 ![Диаграмма активности](diagrams/activity.png)
+
+## Диаграмма состояний (State Machine diagram)
+
+* Онлайн генерация (формат mermaid)
