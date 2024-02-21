@@ -1,0 +1,22 @@
+@startuml
+actor Студент as student
+participant Проект as project
+database .git as local_storage
+database Github as github
+control "Github actions" as github_actions
+
+student -> project : Написание кода
+project -> local_storage : git commit
+local_storage -> github : git push
+activate github
+github -> github_actions : Запуск CI/CD
+activate github_actions
+github_actions -> github_actions : компиляция
+github_actions -> github_actions : тестирование
+github_actions -> coveralls : Оценка покрытия
+github_actions -> sonarcloud : Стат.анализ
+github_actions -> github : бейдж
+deactivate github_actions
+github -> student : Результаты CI/CD
+deactivate github
+@enduml

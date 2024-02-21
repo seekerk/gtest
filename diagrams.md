@@ -1,4 +1,4 @@
-# Примеры диаграмм на Mermaid
+# Примеры диаграмм на Mermaid/PlantUML
 
 ## Литература и справочные руководства
 * https://mermaid.js.org/
@@ -65,3 +65,10 @@ end note
 
 ![Диаграмма состояний](diagrams/state-machine.png)
 
+## Диаграмма последовательности (Sequence diagram)
+
+* Онлайн генерация (формат mermaid)
+
+* [оффлайн файл](diagrams/sequence.puml)
+
+![Диаграмма последовательности](diagrams/sequence.png)
