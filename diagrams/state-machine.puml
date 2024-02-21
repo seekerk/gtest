@@ -1,0 +1,13 @@
+@startuml
+hide empty description
+state "Копия репозитория шаблона" as init_state
+state "Шаблон без кода и примеров тестов" as empty_state
+[*] --> init_state
+init_state: код фибоначчи
+init_state: примеры тестов
+init_state --> empty_state
+empty_state --> code_state
+code_state: функция нахождения корней
+code_state: тесты функции
+code_state --> [*]
+@enduml

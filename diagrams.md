@@ -39,3 +39,8 @@ node8 --> [*]
 ## Диаграмма состояний (State Machine diagram)
 
 * Онлайн генерация (формат mermaid)
+
+* [оффлайн файл](diagrams/state-machine.puml)
+
+![Диаграмма состояний](diagrams/state-machine.png)
+
