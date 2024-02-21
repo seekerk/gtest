@@ -39,6 +39,27 @@ node8 --> [*]
 ## Диаграмма состояний (State Machine diagram)
 
 * Онлайн генерация (формат mermaid)
+```mermaid
+stateDiagram-v2
+node1: Копия репозитория шаблона
+node2: Шаблон без кода и примеров тестов
+node3: Шаблон с кодом и тестами
+
+[*] --> node1
+node1 --> node2
+node2 --> node3
+node3 --> [*]
+
+note left of node1
+  код фибоначчи
+  примеры тестов
+end note
+
+note right of node3
+  функция нахождения корней
+  тесты функции
+end note
+```
 
 * [оффлайн файл](diagrams/state-machine.puml)
 
