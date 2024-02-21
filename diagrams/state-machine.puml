@@ -2,6 +2,7 @@
 hide empty description
 state "Копия репозитория шаблона" as init_state
 state "Шаблон без кода и примеров тестов" as empty_state
+state "Шаблон с кодом и текстами" as code_state
 [*] --> init_state
 init_state: код фибоначчи
 init_state: примеры тестов
