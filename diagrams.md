@@ -67,8 +67,33 @@ end note
 
 ## Диаграмма последовательности (Sequence diagram)
 
+* Документация: https://mermaid.js.org/syntax/sequenceDiagram.html
 * Онлайн генерация (формат mermaid)
+```mermaid
+sequenceDiagram
+actor student as Студент
+participant project as Проект
+participant local_storage as .git
+participant github as Github
+participant github_actions as Github actions
+
+student->>project: Написание кода
+project ->> local_storage : git commit
+local_storage ->> github : git push
+activate github
+github ->> github_actions : Запуск CI/CD
+activate github_actions
+github_actions ->> github_actions : компиляция
+github_actions ->> github_actions : тестирование
+github_actions ->> coveralls : Оценка покрытия
+github_actions ->> sonarcloud : Стат.анализ
+github_actions -->> github : бейдж
+deactivate github_actions
+github -->> student : Результаты CI/CD
+deactivate github
+```
 
 * [оффлайн файл](diagrams/sequence.puml)
+* Документация: https://plantuml.com/ru/sequence-diagram
 
 ![Диаграмма последовательности](diagrams/sequence.png)
